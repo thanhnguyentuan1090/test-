@@ -14,13 +14,21 @@ function adjacentElementsProduct(inputArray) {
 }
 adjacentElementsProduct(input);
 
+const all = [60, 40, 55, 75, 64];
+
 function alternatingSums(a) {
-  var input2 = [60, 40, 55, 75, 64];
-  input2 = input2.filter(i => input2(i){
-    return(I )
-  });
-  console.log(input2);
+  const team1 = a.filter((a, i) => i % 2 === 0);
+  const team2 = a.filter((a, i) => i % 2 === 1);
+
+  const sum1 = team1.reduce((partialSum, a) => partialSum + a, 0);
+  const sum2 = team2.reduce((partialSum, a) => partialSum + a, 0);
+
+  const weightedSum = [];
+  weightedSum.push(sum1, sum2);
+  console.log(weightedSum);
 }
+
+alternatingSums(all);
 
 export default adjacentElementsProduct;
 export { alternatingSums };
